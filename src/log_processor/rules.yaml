@@ -1,0 +1,15 @@
+---
+rule1:
+  device_type: ARISTA
+  #regex: 'Line protocol on Interface (?<interface>\S+).+changed state to (?<state>\S+)'
+  regex: 'Line protocol on Interface (?<interface>\S+).+changed state to down'
+  remediate:
+    - port_down_arista.py
+  alert_type: Interface Status
+rule_junos:
+  device_type: JUNOS
+  #regex: 'mib2d\[\d+\]: SNMP_TRAP_LINK_(DOWN|UP): ifIndex (?<ifindex>\d+), ifAdminStatus (?<ifadminstatus>\w+)\(\d+\), ifOperStatus (?<state>\w+)\(\d+\), ifName (?<interface>\S+)'
+  regex: 'mib2d\[\d+\]: SNMP_TRAP_LINK_DOWN: ifIndex \d+, ifAdminStatus \w+\(\d+\), ifOperStatus \w+\(\d+\), ifName (?<interface>\S+)'
+  remediate:
+    - port_down_junos.py
+  alert_type: Interface Status

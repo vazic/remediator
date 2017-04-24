@@ -1,0 +1,343 @@
+# carton snapshot format: version 1.0
+DISTRIBUTIONS
+  CPAN-Meta-2.150010
+    pathname: D/DA/DAGOLDEN/CPAN-Meta-2.150010.tar.gz
+    provides:
+      CPAN::Meta 2.150010
+      CPAN::Meta::Converter 2.150010
+      CPAN::Meta::Feature 2.150010
+      CPAN::Meta::History 2.150010
+      CPAN::Meta::Merge 2.150010
+      CPAN::Meta::Prereqs 2.150010
+      CPAN::Meta::Spec 2.150010
+      CPAN::Meta::Validator 2.150010
+      Parse::CPAN::Meta 2.150010
+    requirements:
+      CPAN::Meta::Requirements 2.121
+      CPAN::Meta::YAML 0.011
+      Carp 0
+      Encode 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.17
+      File::Spec 0.80
+      JSON::PP 2.27300
+      Scalar::Util 0
+      perl 5.008001
+      strict 0
+      version 0.88
+      warnings 0
+  Clone-PP-1.07
+    pathname: N/NE/NEILB/Clone-PP-1.07.tar.gz
+    provides:
+      Clone::PP 1.07
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      perl 5.006
+      strict 0
+      vars 0
+      warnings 0
+  Data-Printer-0.39
+    pathname: G/GA/GARU/Data-Printer-0.39.tar.gz
+    provides:
+      Data::Printer 0.39
+      Data::Printer::Filter undef
+      Data::Printer::Filter::DB undef
+      Data::Printer::Filter::DateTime undef
+      Data::Printer::Filter::Digest undef
+    requirements:
+      Carp 0
+      Clone::PP 0
+      ExtUtils::MakeMaker 0
+      Fcntl 0
+      File::HomeDir 0.91
+      File::Spec 0
+      File::Temp 0
+      Package::Stash 0.3
+      Scalar::Util 0
+      Sort::Naturally 0
+      Term::ANSIColor 3
+      Test::More 0.88
+      version 0.77
+  Dist-CheckConflicts-0.11
+    pathname: D/DO/DOY/Dist-CheckConflicts-0.11.tar.gz
+    provides:
+      Dist::CheckConflicts 0.11
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.30
+      Module::Runtime 0.009
+      base 0
+      strict 0
+      warnings 0
+  File-HomeDir-1.002
+    pathname: R/RE/REHSACK/File-HomeDir-1.002.tar.gz
+    provides:
+      File::HomeDir 1.002
+      File::HomeDir::Darwin 1.002
+      File::HomeDir::Darwin::Carbon 1.002
+      File::HomeDir::Darwin::Cocoa 1.002
+      File::HomeDir::Driver 1.002
+      File::HomeDir::FreeDesktop 1.002
+      File::HomeDir::MacOS9 1.002
+      File::HomeDir::TIE 1.002
+      File::HomeDir::Test 1.002
+      File::HomeDir::Unix 1.002
+      File::HomeDir::Windows 1.002
+    requirements:
+      Carp 0
+      Cwd 3.12
+      ExtUtils::MakeMaker 0
+      File::Basename 0
+      File::Path 2.01
+      File::Spec 3.12
+      File::Temp 0.19
+      File::Which 0.05
+      POSIX 0
+      perl 5.005003
+  File-Which-1.21
+    pathname: P/PL/PLICEASE/File-Which-1.21.tar.gz
+    provides:
+      File::Which 1.21
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5.006
+  JSON-PP-2.27400
+    pathname: M/MA/MAKAMAKA/JSON-PP-2.27400.tar.gz
+    provides:
+      JSON::PP 2.27400
+      JSON::PP::Boolean 2.27400
+      JSON::PP::IncrParser 2.27400
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
+  Log-Log4perl-1.49
+    pathname: M/MS/MSCHILLI/Log-Log4perl-1.49.tar.gz
+    provides:
+      L4pResurrectable 0.01
+      Log::Log4perl 1.49
+      Log::Log4perl::Appender undef
+      Log::Log4perl::Appender::DBI undef
+      Log::Log4perl::Appender::File undef
+      Log::Log4perl::Appender::RRDs undef
+      Log::Log4perl::Appender::Screen undef
+      Log::Log4perl::Appender::ScreenColoredLevels undef
+      Log::Log4perl::Appender::Socket undef
+      Log::Log4perl::Appender::String undef
+      Log::Log4perl::Appender::TestArrayBuffer undef
+      Log::Log4perl::Appender::TestBuffer undef
+      Log::Log4perl::Appender::TestFileCreeper undef
+      Log::Log4perl::Config undef
+      Log::Log4perl::Config::BaseConfigurator undef
+      Log::Log4perl::Config::DOMConfigurator 0.03
+      Log::Log4perl::Config::PropertyConfigurator undef
+      Log::Log4perl::Config::Watch undef
+      Log::Log4perl::DateFormat undef
+      Log::Log4perl::Filter undef
+      Log::Log4perl::Filter::Boolean undef
+      Log::Log4perl::Filter::LevelMatch undef
+      Log::Log4perl::Filter::LevelRange undef
+      Log::Log4perl::Filter::MDC undef
+      Log::Log4perl::Filter::StringMatch undef
+      Log::Log4perl::InternalDebug undef
+      Log::Log4perl::JavaMap undef
+      Log::Log4perl::JavaMap::ConsoleAppender undef
+      Log::Log4perl::JavaMap::FileAppender undef
+      Log::Log4perl::JavaMap::JDBCAppender undef
+      Log::Log4perl::JavaMap::NTEventLogAppender undef
+      Log::Log4perl::JavaMap::RollingFileAppender undef
+      Log::Log4perl::JavaMap::SyslogAppender undef
+      Log::Log4perl::JavaMap::TestBuffer undef
+      Log::Log4perl::Layout undef
+      Log::Log4perl::Layout::NoopLayout undef
+      Log::Log4perl::Layout::PatternLayout undef
+      Log::Log4perl::Layout::PatternLayout::Multiline undef
+      Log::Log4perl::Layout::SimpleLayout undef
+      Log::Log4perl::Level undef
+      Log::Log4perl::Logger undef
+      Log::Log4perl::MDC undef
+      Log::Log4perl::NDC undef
+      Log::Log4perl::Resurrector undef
+      Log::Log4perl::Util undef
+      Log::Log4perl::Util::Semaphore undef
+      Log::Log4perl::Util::TimeTracker undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      File::Path 2.0606
+      File::Spec 0.82
+      Test::More 0.45
+  Math-Int64-0.54
+    pathname: S/SA/SALVA/Math-Int64-0.54.tar.gz
+    provides:
+      Math::Int64 0.54
+      Math::Int64::die_on_overflow 0.54
+      Math::Int64::native_if_available 0.54
+      Math::UInt64 0.54
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      XSLoader 0
+      constant 0
+      overload 0
+      perl 5.006
+      strict 0
+      warnings 0
+      warnings::register 0
+  Module-Build-0.4222
+    pathname: L/LE/LEONT/Module-Build-0.4222.tar.gz
+    provides:
+      Module::Build 0.4222
+      Module::Build::Base 0.4222
+      Module::Build::Compat 0.4222
+      Module::Build::Config 0.4222
+      Module::Build::Cookbook 0.4222
+      Module::Build::Dumper 0.4222
+      Module::Build::Notes 0.4222
+      Module::Build::PPMMaker 0.4222
+      Module::Build::Platform::Default 0.4222
+      Module::Build::Platform::MacOS 0.4222
+      Module::Build::Platform::Unix 0.4222
+      Module::Build::Platform::VMS 0.4222
+      Module::Build::Platform::VOS 0.4222
+      Module::Build::Platform::Windows 0.4222
+      Module::Build::Platform::aix 0.4222
+      Module::Build::Platform::cygwin 0.4222
+      Module::Build::Platform::darwin 0.4222
+      Module::Build::Platform::os2 0.4222
+      Module::Build::PodParser 0.4222
+    requirements:
+      CPAN::Meta 2.142060
+      CPAN::Meta::YAML 0.003
+      Cwd 0
+      Data::Dumper 0
+      ExtUtils::CBuilder 0.27
+      ExtUtils::Install 0
+      ExtUtils::Manifest 0
+      ExtUtils::Mkbootstrap 0
+      ExtUtils::ParseXS 2.21
+      File::Basename 0
+      File::Compare 0
+      File::Copy 0
+      File::Find 0
+      File::Path 0
+      File::Spec 0.82
+      File::Temp 0.15
+      Getopt::Long 0
+      Module::Metadata 1.000002
+      Parse::CPAN::Meta 1.4401
+      Perl::OSType 1
+      Pod::Man 2.17
+      TAP::Harness 3.29
+      Test::More 0.49
+      Text::Abbrev 0
+      Text::ParseWords 0
+      perl 5.006001
+      version 0.87
+  Module-Implementation-0.09
+    pathname: D/DR/DROLSKY/Module-Implementation-0.09.tar.gz
+    provides:
+      Module::Implementation 0.09
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 0
+      Module::Runtime 0.012
+      Try::Tiny 0
+      strict 0
+      warnings 0
+  Module-Runtime-0.014
+    pathname: Z/ZE/ZEFRAM/Module-Runtime-0.014.tar.gz
+    provides:
+      Module::Runtime 0.014
+    requirements:
+      Module::Build 0
+      Test::More 0
+      perl 5.006
+      strict 0
+      warnings 0
+  Net-AMQP-RabbitMQ-2.30000
+    pathname: M/MA/MARKELLIS/Net-AMQP-RabbitMQ-2.30000.tar.gz
+    provides:
+      Net::AMQP::RabbitMQ 2.30000
+    requirements:
+      ExtUtils::MakeMaker 0
+      Math::Int64 0.34
+      Scalar::Util 0
+      XSLoader 0
+  Package-Stash-0.37
+    pathname: D/DO/DOY/Package-Stash-0.37.tar.gz
+    provides:
+      Package::Stash 0.37
+      Package::Stash::PP 0.37
+    requirements:
+      B 0
+      Carp 0
+      Config 0
+      Dist::CheckConflicts 0.02
+      ExtUtils::MakeMaker 0
+      File::Spec 0
+      Getopt::Long 0
+      Module::Implementation 0.06
+      Package::Stash::XS 0.26
+      Scalar::Util 0
+      Symbol 0
+      Text::ParseWords 0
+      constant 0
+      strict 0
+      warnings 0
+  Package-Stash-XS-0.28
+    pathname: D/DO/DOY/Package-Stash-XS-0.28.tar.gz
+    provides:
+      Package::Stash::XS 0.28
+    requirements:
+      ExtUtils::MakeMaker 6.30
+      XSLoader 0
+      strict 0
+      warnings 0
+  Sort-Naturally-1.03
+    pathname: B/BI/BINGOS/Sort-Naturally-1.03.tar.gz
+    provides:
+      Sort::Naturally 1.03
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5
+  Try-Tiny-0.28
+    pathname: E/ET/ETHER/Try-Tiny-0.28.tar.gz
+    provides:
+      Try::Tiny 0.28
+    requirements:
+      Carp 0
+      Exporter 5.57
+      ExtUtils::MakeMaker 0
+      constant 0
+      perl 5.006
+      strict 0
+      warnings 0
+  YAML-1.23
+    pathname: I/IN/INGY/YAML-1.23.tar.gz
+    provides:
+      YAML 1.23
+      YAML::Any 1.23
+      YAML::Dumper undef
+      YAML::Dumper::Base undef
+      YAML::Error undef
+      YAML::Loader undef
+      YAML::Loader::Base undef
+      YAML::Marshall undef
+      YAML::Mo undef
+      YAML::Node undef
+      YAML::Tag undef
+      YAML::Type::blessed undef
+      YAML::Type::code undef
+      YAML::Type::glob undef
+      YAML::Type::ref undef
+      YAML::Type::regexp undef
+      YAML::Type::undef undef
+      YAML::Types undef
+      YAML::Warning undef
+      yaml_mapping undef
+      yaml_scalar undef
+      yaml_sequence undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5.008001

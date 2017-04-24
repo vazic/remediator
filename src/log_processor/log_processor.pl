@@ -32,9 +32,14 @@ GetOptions(
     'c|config'       => \(my $config_file = File::Spec->catdir( File::Spec->catdir( File::Spec->rel2abs( dirname( $0 ) ) ) , 'config.yaml' ) ),
     'i|incoming'    => \(my $incoming = 'rawlogs' ),
     'o|outgoing'    => \(my $outgoing = 'events' ),
+    'p|port'        => \(my $port = 5672 ),
+    'u|user'        => \(my $user = 'guest'),
+    'password'      => \(my $password = 'guest'),
+    'v|vhost'       => \(my $vhost = '/'),
     'h|host'        => \(my $host = 'localhost' ),
     'l|logger'      => \(my $logger_file = File::Spec->catdir( File::Spec->rel2abs( dirname( $0 ) ) , 'log_processor.logger' ) ),
     'channel'       => \(my $channel = 1 ),
+    'b|basereg'      => \(my $basereg = '^(?<time>\w{3}\s+\d{2}\s+\d{2}\:\d{2}\:\d{2})\s+(?<hostname>\S+)\s+(?<rest>.*)$'),
 );
 
 Log::Log4perl::init_and_watch( $logger_file );
@@ -42,11 +47,11 @@ my $logger = Log::Log4perl->get_logger;
 
 sub load_yaml {
     my $file = shift // die 'error, no file specified';
-    -f $file || do { 
+    -f $file || do {
         $logger->fatal("$file not found!..");
         exit(2)
     };
-    my $ret = LoadFile($file) // do { 
+    my $ret = LoadFile($file) // do {
         $logger->fatal("Error!..Cannot parse $file");
         exit(3)
     };
@@ -58,12 +63,26 @@ sub load_yaml {
 my $conf = load_yaml( $config_file );
 my $rules = load_yaml( $rules_file );
 
-$host = (defined( $conf->{ RABBITMQ_HOST } ))? $conf->{ RABBITMQ_HOST } : $host ;
+# if there are any overrides in the conf file, replace our internal
+# defaults now
+for my $var_name ( qw( host port user pass vhost incoming outgoing ) ) {
+	my $conf_var = 'RABBITMQ_'.uc($var_name);
+	${ $var_name } = $conf->{ $conf_var } if defined( $conf->{ $conf_var } );
+}
+$basereg = $conf->{ BASEREG } if defined( $conf->{ BASEREG } );
 
+# note: mq-> methods will croak on error. This is actually
+# okay for our current purposes
 use Net::AMQP::RabbitMQ;
 my $mq = Net::AMQP::RabbitMQ->new();
 
-$mq->connect($host, {});
+$mq->connect($host, {
+	user		=> $user,
+	password	=> $password,
+	vhost		=> $vhost,
+	port		=> $port,
+});
+
 $mq->channel_open($channel);
 my $options = { auto_delete => 0 };
 $mq->queue_declare($channel, $incoming, $options );
@@ -101,13 +120,13 @@ while(1) {
 sub send_line {
     send_event( parse_line( $_[0], $conf, $rules ), $mq, $channel, $outgoing )
 }
-                
+
 sub send_event {
     my $event   = shift // die 'event cannot be undefined';
     my $mq      = shift // die 'message queue object cannot be undefined';
     my $channel = shift // die 'channel name cannot be undefined';
     my $key     = shift // die 'routing key name cannot be undefined';
-   
+
     my $json = encode_json( $event ) // do {
         $logger->fatal('cannot serialize to JSON:'.Dumper($event));
         exit(3)

@@ -1,10 +1,9 @@
 ---
-DEBUG: 2
-QUEUE_LOG: logprocess
+RABBITMQ_INCOMING: rawlogs
+RABBITMQ_OUTGOING: events
 RABBITMQ_HOST: localhost
 RABBITMQ_PORT: 5672
 RABBITMQ_USER: guest
 RABBITMQ_PASS: guest
 RABBITMQ_VHOST: '/'
-LOGFILE: '/var/log/syslog'
 BASEREG: '^(?<time>\w{3}\s+\d{2}\s+\d{2}\:\d{2}\:\d{2})\s+(?<hostname>\S+)\s+(?<rest>.*)$'

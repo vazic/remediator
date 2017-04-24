@@ -1,17 +1,17 @@
-log4perl.logger = DEBUG, Screen
-#log4perl.logger = TRACE, LogFile
+log4perl.logger						= DEBUG, Screen
+#log4perl.logger					= TRACE, LogFile
 
 # standard error
-log4perl.appender.Screen                    = Log::Log4perl::Appender::ScreenColoredLevels
-log4perl.appender.Screen.stderr             = 1
-log4perl.appender.Screen.layout             = PatternLayout
-log4perl.appender.Screen.layout.ConversionPattern   = %d [%P] %m%n
+log4perl.appender.Screen				= Log::Log4perl::Appender::ScreenColoredLevels
+log4perl.appender.Screen.stderr				= 1
+log4perl.appender.Screen.layout				= PatternLayout
+log4perl.appender.Screen.layout.ConversionPattern	= %d [%P] %m%n
 
-#log4perl.appender.LOGFILE              = Log::Log4perl::Appender::File
-log4perl.appender.LogFile               = Log::Dispatch::FileRotate
-log4perl.appender.LogFile.max               = 10
-log4perl.appender.LogFile.filename          = /home/ntc/remediator/aduitsis/perl-anyevent-daemon.log
-log4perl.appender.LogFile.mode              = append
-log4perl.appender.LogFile.DatePattern           = yyyy-MM-dd
-log4perl.appender.LogFile.layout            = PatternLayout
-log4perl.appender.LogFile.layout.ConversionPattern  = %d [%P] %m%n
+#log4perl.appender.LOGFILE				= Log::Log4perl::Appender::File
+log4perl.appender.LogFile				= Log::Dispatch::FileRotate
+log4perl.appender.LogFile.max				= 10
+log4perl.appender.LogFile.filename			= /var/log/remediator/log_processor.log
+log4perl.appender.LogFile.mode				= append
+log4perl.appender.LogFile.DatePattern			= yyyy-MM-dd
+log4perl.appender.LogFile.layout			= PatternLayout
+log4perl.appender.LogFile.layout.ConversionPattern	= %d [%P] %m%n

@@ -1,2 +1,12 @@
-- perl-anyevent-modular-daemon has been removed from this repo.
-
+This piece of code can be used using a fairly recent Perl (e.g. 5.20)
+and a certain set of CPAN modules. Any modern (as of 2017) OS includes
+a perfectly good Perl which can be used. To install the modules, just
+install carton to the system (sudo apt-get install carton in Debian,
+pkg install p5-carton in FreeBSD) and then issue 'carton' inside the
+directory. Other than carton itself, nothing more will be installed
+system-wide, so the base OS will not be littered with packages and
+modules. All the necessary modules will be installed locally under
+local/ in this dir and their versions will not clash with other
+installed and used versions of the same modules elsewhere. The local/
+directory can also be tranferred as-is in case of a need to quickly
+transfer the software in another location or host.

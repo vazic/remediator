@@ -3,6 +3,8 @@ An automatic remediation tool for network infrastructure.  This project is based
 
 # system diagram
 
+```
+
    +--------+
    | syslog |
    +---|----+              +---------------------------+
@@ -36,6 +38,7 @@ An automatic remediation tool for network infrastructure.  This project is based
                              |    Network Device     |<--------------+
                              |                       |
                              +-----------------------+
+```
 
 # installation
 
